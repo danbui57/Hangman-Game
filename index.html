@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Hangman Game</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+</head>
+
+<body>
+    <div>
+        <h1 class="title">Hangman Game</h1>
+        <h3 class="rules">Guess any country in South America!</h3>
+    </div>
+
+    <div id="container">
+        <div id="continent-div"><img src="assets/images/south-america.gif" alt="continent of South America"></div>
+        <div id="game-section">
+            <p>Press any key to get started!</p>
+            <div id="current-word"></div>
+            <div>
+                <h3 class="section-title">Wins:</h3><span id="wins"></span>
+            </div>
+            <div>
+                <h3 class="section-title">Losses:</h3><span id="losses"><span></span>
+            </div>
+            <div>
+                <h3 class="section-title">Guesses Remaining:</h3><span id="guesses"></span>
+            </div>
+            <div>
+                <h3 class="section-title">Letters already guessed:</h3><span id="letters-guessed"></span>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="assets/javascript/main.js"></script>
+</body>
+
+</html>
