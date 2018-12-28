@@ -66,6 +66,22 @@ var hangman = {
             country: "Chile",
             website: "https://en.wikipedia.org/wiki/Chile"
         }
-    }
+    },
+country: null,
+lettersOfCountry: [],
+matchedLetters: [],
+guessedLetters: [],
+guessesLeft: 0,
+totalGuesses: 0,
+letterGuessed: null,
+wins: 0,
 
+setupGame: function() {
+    var objKeys = Object.keys(this.countriesToPick);
+    this.country = objKeys[Math.floor(Math.random() * objKeys.length)];
+
+    this.country.split("");
 }
+};
+
+hangman.setupGame();
