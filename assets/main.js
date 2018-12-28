@@ -71,17 +71,61 @@ country: null,
 lettersOfCountry: [],
 matchedLetters: [],
 guessedLetters: [],
-guessesLeft: 0,
+guessesLeft: 5,
 totalGuesses: 0,
 letterGuessed: null,
 wins: 0,
+losses: 0,
 
 setupGame: function() {
     var objKeys = Object.keys(this.countriesToPick);
     this.country = objKeys[Math.floor(Math.random() * objKeys.length)];
 
     this.country.split("");
-}
+},
+
+updatePage: function(letter) {
+
+    if (this.guessesLeft === 0) {
+        this.restartGame();
+    }else {
+        this.updateGuesses(letter);
+        }
+    },
+
+    updateGuesses: function(letter) {
+
+        if ((this.guessedLetters.indexOf(letter) === -1) && (this.lettersOfCountry.indexOf(letter) === -1)) {
+console.log(letter)
+            this.guessedLetters.push(letter);
+
+            this.guessesLeft--;
+            
+            document.querySelector("#guesses").innerHTML = this.guessesLeft;
+            document.querySelector("#letters-guessed").innerHTML = letter
+        }
+    },
+
+    restartGame: function() {
+        document.querySelector("#letters-guessed").innerHTML = "";
+        this.country = null;
+        this.lettersOfCountry = [];
+        this.matchedLetters = [];
+        this.guessedLetters = [];
+        this.guessesLeft = 0;
+        this.totalGuesses = 0;
+        this.letterGuessed = null;
+        this.setupGame();
+
+    }
+
 };
 
+
 hangman.setupGame();
+
+document.onkeyup = function(event) {
+
+    // hangman.letterGuessed = String.fromCharCode(event.which).toLowerCase();
+    hangman.updatePage(hangman.letterGuessed);
+};
