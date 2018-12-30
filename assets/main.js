@@ -17,16 +17,16 @@ var hangman = {
             website: "https://en.wikipedia.org/wiki/Ecuador"
         },
         guyana: {
-            picture: "guyana.jpg",
+            picture: "guyana.png",
             country: "Guyana",
             website: "https://en.wikipedia.org/wiki/Guyana"
         },
         suriname: {
-            picture: "suriname.jpg",
+            picture: "suriname.png",
             country: "Suriname",
             website: "https://en.wikipedia.org/wiki/Suriname"
         },
-        frenchGuiana: {
+        frenchguiana: {
             picture: "french-guiana.png",
            country: "French Guiana",
             website: "https://en.wikipedia.org/wiki/French_Guiana"
@@ -47,7 +47,7 @@ var hangman = {
             website: "https://en.wikipedia.org/wiki/Bolivia"
         },
         paraguay: {
-            picture: "paraguay.jpg",
+            picture: "paraguay.png",
             country: "paraguay",
             website: "https://en.wikipedia.org/wiki/Paraguay"
         },
@@ -57,12 +57,12 @@ var hangman = {
             website: "ttps://en.wikipedia.org/wiki/Argentina"
         },
         uruguay: {
-            picture: "uruguay.jpg",
+            picture: "uruguay.png",
             country: "Uruguay",
             website: "https://en.wikipedia.org/wiki/Uruguay"
         },
         chile: {
-            picture: "chile.jpg",
+            picture: "chile.png",
             country: "Chile",
             website: "https://en.wikipedia.org/wiki/Chile"
         }
@@ -105,7 +105,7 @@ updatePage: function(letter) {
             }
         if (this.guessesLeft === 0 && this.updateWins() === false) {
             this.losses += 1;
-            document.querySelector("#losses").innerHTML = this.losses
+            document.querySelector("#losses").innerHTML = this.losses;
             this.restartGame();
         }
         }
@@ -149,9 +149,10 @@ updatePage: function(letter) {
         for(var i = 0; i < this.lettersOfCountry.length; i++) {
 
             if(this.matchedLetters.indexOf(this.lettersOfCountry[i]) !== -1) {
-                wordView += this.lettersOfCountry[i];
+                console.log(wordView += this.lettersOfCountry[i]);
+                
             }else {
-                wordView += " _ "
+                wordView += "  _  "
             }
         }
         document.querySelector("#current-word").innerHTML = wordView;
