@@ -37,7 +37,7 @@ var hangman = {
             website: "https://en.wikipedia.org/wiki/Peru"
         },
         brazil: {
-            picture: "brazil.png",
+            picture: "Brazil.png",
             country: "Brazil",
             website: "https://en.wikipedia.org/wiki/Brazil"
         },
