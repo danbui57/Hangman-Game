@@ -26,7 +26,7 @@ img {
 }
 
 #game-section {
-    color:white;
+    color:whitesmoke;
     text-align: center;
 }
 .title {
@@ -38,7 +38,7 @@ img {
 }
 
 .subtitle {
-    color: white;
+    color: whitesmoke;
     text-align: center;
     position:relative;
     bottom: 150px
@@ -50,4 +50,17 @@ img {
 #rules {
     font-family: cursive;
     font-size: 25px;
+}
+
+#wikiSite {
+    font-size: 40px;
+    text-align: center;
+    color: whitesmoke;
+    text-decoration: none;
+
+}
+
+#link {
+    color: yellow;
+    font-size: 15px;
 }

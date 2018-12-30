@@ -196,6 +196,11 @@ updatePage: function(letter) {
             this.countriesToPick[this.country].picture + "' alt='" +
             this.countriesToPick[this.country].country + "'>";
 
+            document.querySelector("#wikiSite").innerHTML = 
+            "<span id='link'> click here for more info </span>" + 
+            "<a href=" + this.countriesToPick[this.country].website + ">" +
+            this.countriesToPick[this.country].country + "</a>";
+
             return true;
         }
         return false;
